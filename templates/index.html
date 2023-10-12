@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Model Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: backgroundAnimation 10s infinite alternate;
+           
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #f4f4f4;
+            }
+
+            100% {
+                background-color: #ffffff;
+            }
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Enter Feature Values</h1>
+        <h2>Abdelrahman Adel Hassan</h2>
+        <form action="/predict" method="post">
+            <label for="longitude">Longitude:</label>
+            <input type="text" name="longitude" id="longitude" required>
+
+            <label for="latitude">Latitude:</label>
+            <input type="text" name="latitude" id="latitude" required>
+
+            <label for="housing_median_age">Housing Median Age:</label>
+            <input type="text" name="housing_median_age" id="housing_median_age" required>
+
+            <label for="total_rooms">Total Rooms:</label>
+            <input type="text" name="total_rooms" id="total_rooms" required>
+
+            <label for="total_bedrooms">Total Bedrooms:</label>
+            <input type="text" name="total_bedrooms" id="total_bedrooms" required>
+
+            <label for="population">Population:</label>
+            <input type="text" name="population" id="population" required>
+
+            <label for="households">Households:</label>
+            <input type="text" name="households" id="households" required>
+
+            <label for="median_income">Median Income:</label>
+            <input type="text" name="median_income" id="median_income" required>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+
+</html>
